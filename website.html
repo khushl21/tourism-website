@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parallax scrolling website</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+	<header>
+		<a href="website.html" class="logo"><img src="swan.png"></a>
+		<ul>
+			<li><a href="website.html" class="active">Home</a></li>
+			<li><a href="packages.html">Packages</a></li>
+			<li><a href="booking.html">Booking</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</header>
+	<section>
+		<img src="stars.png" id="stars">
+		<img src="moon.png" id="moon">
+		<img src="mountains_front.png" id="mountains_behind">
+		<img src="man.png" id="mountains_front">
+		<h2 id="text">Swan Tourism</h2>
+		<a href="#sec" id="btn">Explore</a>
+	</section>
+	<div class="sec" id="sec">
+		<h2 style="margin-bottom: 30px;">Travel the world one place at a time</h2>
+		<img src="https://www.worldtimeserver.com/images/content/tips%20for%20traveling.jpg" style="border-radius: 5px; margin-left: 30px; height: 400px;" align="right">
+		<p style="margin-top: 45px;">In today’s tech-obsessed world, social media may well be the perfect platform to showcase the world’s beauty to armchair travellers across the globe, but travel is so much more than just getting that perfect Instagram shot. Travel should be meaningful. It should excite and inspire you, rejuvenate and ground you, educate and challenge you, and most of all, it should humble you.<br>
+		Travel gives us our greatest stories, our most cherished memories and countless irreplaceable learnings that we can choose to pay forward to others. It teaches us about ourselves and each other, it broadens our horizons and, just like a reset button, it forces us to refocus on what really matters.</p>
+		<a href="packages.html"><button id="learn-more">Learn More</button></a>
+	</div>
+	<div class="sec" id="sec">
+		<h2 style="margin-bottom: 30px;">Always take the scenic road</h2>
+		<img src="https://free4kwallpapers.com/uploads/originals/2019/04/01/scenic-landscape-wallpaper.jpg" style="border-radius: 5px; margin-right: 30px; height: 400px;" align="left">
+		<p style="margin-top: 45px;">Our customers trust us with their vacations since 25 years. We are a team of 40 experienced travel agents based in India, providing personalized services to groups and individual travellers from all over the world. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, RewardsProgram, Wallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
+		<a href="booking.html"><button id="learn-more">Book Now</button></a>
+	</div>
+
+
+	<script>
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let mountains_behind = document.getElementById('mountains_behind');
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let mountains_front = document.getElementById('mountains_front');
+		let header = document.querySelector('header');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			stars.style.left = value * 0.25 + 'px';
+			moon.style.top = value * 1.05 + 'px';
+			text.style.marginRight = value * 4 + 'px';
+			btn.style.marginRight = value * 4 + 'px';
+		})
+	</script>
+</body>
+</html>
